@@ -6,9 +6,20 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
+  var min = array[0];
+  var lessThanZero = [];
+  for (var i in array) {
+    if (array[i].balance > 0 && array[i].balance < min.balance) {
+      min = array[i];
+    } else if (array[i].balance <= 0) {
+      lessThanZero.push(array[i]);
+    } 
+  }
+  if (lessThanZero.length > 0 && min.balance <= 0) {
+    return [];
+  }
+  return [min];
 }
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"
 // If the test has all tests passed, switch to the next exercise file

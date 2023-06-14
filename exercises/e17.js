@@ -7,7 +7,13 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
+  var doesInclude = false;
+  for (var i in array) {
+      if (array[i] === value || array[i] === value.toUpperCase()) {
+        doesInclude = true;
+    }
+  }
+  return doesInclude;
 }
 
 

@@ -6,7 +6,11 @@
 
 export function reverseArray(array) {
   // Your code goes here...
-
+  var reversedArr = [];
+  for (var i = array.length - 1; i > -1; i--) {
+    reversedArr.push(array[i]);
+  }
+  return reversedArr;
 }
 
 
